@@ -1,0 +1,27 @@
+[project]
+name = "mcp-chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Anub11", email = "bej.anubhav@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=3.4.0,<4.0.0",
+    "langchain>=1.4.4",
+    "langchain-groq>=1.1.3",
+    "langchain-mcp-adapters>=0.3.2",
+    "langchain-openai>=1.7.0",
+    "manim>=0.22.0",
+    "mcp>=1.24.0,<2.0.0",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.65.0",
+]
+
+[project.scripts]
+mcp-chatbot = "mcp_chatbot:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
