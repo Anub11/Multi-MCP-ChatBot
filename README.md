@@ -9,24 +9,17 @@ a command-line client, and a local calculator MCP server.
 ```mermaid
 flowchart LR
     U[User]
-    UI[Streamlit UI<br/>client2.py]
-    CLI[CLI client<br/>client1.py]
+    UI[Streamlit client<br/>client2.py]
     OA[OpenRouter model]
-    GR[Groq model]
     AD[LangChain MCP adapter]
     M[Math MCP server<br/>local stdio]
     W[Weather MCP server<br/>Streamable HTTP]
-    MM[Manim MCP server<br/>external local server]
 
     U --> UI
-    U --> CLI
     UI <--> OA
-    CLI <--> GR
     UI <--> AD
-    CLI <--> AD
     AD <--> M
     AD <--> W
-    AD <--> MM
 ```
 
 The clients discover MCP tools, let the language model choose tools when
